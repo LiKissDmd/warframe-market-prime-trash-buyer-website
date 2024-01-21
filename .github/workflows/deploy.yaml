@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   push:
     branches:
       - "main" # change to the branch you wish to deploy from
@@ -12,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.2
-      with:
-        path: build # change to your build folder
+      - id: build-publish
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.2
+        with:
+          path: build # change to your build folder
