@@ -15,10 +15,10 @@ function App() {
     setIsLoading(true)
 
     const allCoolOrders = await getAllCoolOrders({
-      filterOrder: (order) => {
-        return order.platinum == 4 &&
-          order.user.status == "ingame"
-      }
+      // filterOrder: (order) => {
+      //   return order.platinum == 4 &&
+      //     order.user.status == "ingame"
+      // }
     })
     const messages = generateMessages(allCoolOrders)
     
