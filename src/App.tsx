@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Order, generateMessages, getAllCoolOrders } from '@likissdmd/warframe-market-prime-trash-buyer';
-import { Box, Button, Chip, CircularProgress, Container, Grid, Stack, Typography } from '@mui/material';
+import { Alert, BottomNavigation, BottomNavigationAction, Box, Button, Chip, CircularProgress, Container, Grid, Link, Stack, Typography } from '@mui/material';
 import FaceIcon from '@mui/icons-material/Face';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
@@ -81,6 +81,14 @@ function App() {
           }
         </Grid>
       </Grid>
+      {/* BottomNavigation component */}
+      <Box
+        sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 1000 }}
+      >
+        <Alert severity="warning" sx={{ maxWidth: '600px', margin: 'auto' }}><Link href="https://mybrowseraddon.com/access-control-allow-origin.html" target="_blank" rel="noopener noreferrer">
+      This
+    </Link> or similar browser extension is required because warframe market has strict CORS which does not let this website to make requests to it. We guess it is a bug, not intented configuration.</Alert>
+      </Box>
     </Container>
   )
 }
